@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    {% for news in newsList if news.publisher == 1 %}
+        <div class="row">
+            <h2><a href="{{ path('singl_news',{'id':news.id}) }}">{{ news.title }}</a> </h2>
+            <span> Published in <b>{{ news.date|date('Y-m-d') }}</b></span>
+            <p>{{ news.description }}</p>
+        </div>
+    {% endfor %}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(newsList) }}
+    </div>
+{% endblock %}

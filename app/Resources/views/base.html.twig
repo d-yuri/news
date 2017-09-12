@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title></title>
+</head>
+
+<body>
+<!-- Static navbar -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<div class="container">
+
+    {% block body %}{% endblock %}
+
+
+</div> <!-- /container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block script %}{% endblock %}
+</body>
+<br/>
+<footer class="footer ">
+    <div class="container">
+        <p class="text-muted"><a href="{{ path('news_list') }}">news list</a></p>
+    </div>
+</footer>
+</html>
+
+
+
+

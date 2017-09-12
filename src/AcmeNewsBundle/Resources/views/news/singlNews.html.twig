@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for news in newsList if  news.id == id %}
+        <div class="row">
+            <h2 class="text-center">{{ news.title }}</h2>
+            <span> Published in <b>{{ news.date|date('Y-m-d') }}</b></span>
+            <p class="text-center">{{ news.description }}</p>
+        </div>
+    {% endfor %}
+    <div class="list-group ">
+        {% for news in newsList if news.id !=id %}
+            <a href="{{ path('singl_news',{'id':news.id}) }}" class="list-group-item">{{ news.title }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
